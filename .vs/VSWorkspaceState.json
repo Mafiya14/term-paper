@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\term_paper",
+    "\\term_paper\\Controllers",
+    "\\term_paper\\Views",
+    "\\term_paper\\Views\\Home",
+    "\\term_paper\\wwwroot",
+    "\\term_paper\\wwwroot\\images",
+    "\\term_paper\\wwwroot\\lib"
+  ],
+  "SelectedNode": "\\term_paper\\Startup.cs",
+  "PreviewInSolutionExplorer": false
+}
