@@ -10,16 +10,17 @@ using term_paper.Models;
 namespace term_paper.Controllers
 {
     public class HomeController : Controller
-    {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
+    { 
+        StudyContext studyContext = new StudyContext();
+    
         public IActionResult Index()
         {
+            // извлекаем данные из таблицы Study
+            IEnumerable<Student> students = studyContext.Students;
+
+            // записываем students в динамическое свойство ViewBag
+            ViewBag.Students = students;
+
             return View();
         }
 
@@ -28,10 +29,6 @@ namespace term_paper.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+      
     }
 }

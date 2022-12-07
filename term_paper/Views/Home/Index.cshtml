@@ -1,7 +1,36 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div class="text-center">
-    <h1 class="display-4">Покажи жопу</h1>
-    <p>ну пожалуйста.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        index
+    </title>
+</head>
+
+<body>
+    <h3>личный кабинет студента по физической культуре</h3>
+    <table>
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Имя</td>
+                <td>Группа</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{ 
+                foreach (var student in ViewBag.Students)
+                {
+                        <tr>
+                            <td>@student.ID</td>
+                            <td>@student.FIO</td>
+                            <td>@student.Group</td>
+                        </tr>
+                }
+            }
+        </tbody>
+    </table>
+</body>
+</html>
